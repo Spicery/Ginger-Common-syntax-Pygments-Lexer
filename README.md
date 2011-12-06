@@ -1,16 +1,18 @@
-SPARQL Syntax Lexer for Pygments
-================================
+Ginger Common Syntax Lexer for Pygments
+=======================================
 
-This is a [pygments](http://pygments.org/) lexer for [SPARQL](http://en.wikipedia.org/wiki/SPARQL), the semantic web query language.
+This is a [pygments](http://pygments.org/) lexer for the [Ginger](http://github.com/Spicery/ginger) Common syntax.
 
 Example
 -------
 
-    PREFIX owl:  <http://www.w3.org/2002/07/owl#> 
-
-    SELECT DISTINCT ?class 
-    FROM <http://www.w3.org/2002/07/owl#>
-    WHERE { ?thing a ?class }
+    define nfib( n ) =>>
+        if n <= 1 then
+            1
+        else
+            1 + nfib( n - 1 ) + nfib( n - 2 )
+        endif
+    enddefine;
 
 Installing
 ----------
@@ -20,10 +22,10 @@ Installing
 Development code
 ----------------
 
-    pip install -e git+git://github.com/gjhiggins/sparql_pygments_lexer.git#egg=SPARQL_Pygments_Lexer
+    pip install -e git+git://github.com/Spicery/Ginger-Common-syntax-Pygments-Lexer.git#egg=Ginger-Common-syntax-Pygments-Lexer
 
 Syntax highlighting examples
 ----------------------------
 
-    pygmentize example.sparql
+    pygmentize sample.common
 
